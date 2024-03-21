@@ -5,8 +5,12 @@ module.exports = ({ env }) => ({
      
     }),
     require('autoprefixer')(),
+    require('flowbite/plugin')
    
     ,
   
   ],
+  content: [
+    "./node_modules/flowbite/**/*.js"
+]
 })

@@ -2,15 +2,21 @@ import React from "react";
 import image from "../../images/abstract-bg-1.png";
 import user from "../../images/user.jpg";
 import RadioButtonGroup from "../../components/Radiobtn";
-import Dropdown from "../../components/Dropdown";
+import Horizontalbar from "../../partials/Horizontalbar";
+import ThemeToggle from "../../components/ThemeToggle";
+// import Dropdown from "../components/Dropdown";
 function ProjectSubmissionForm() {
   return (
-    <div className="max-w-4xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <div className="max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-1 mx-auto">
+      <div>
+        <h2 className="mb-4 text-4xl font-bold text-gray-900 dark:text-white">
+          Student Profile
+        </h2>
+      </div>
       <form>
-        {/* Card */}
-        <div className="bg-white rounded-xl shadow dark:bg-slate-900">
+        <div className="bg-white rounded-xl shadow text-gray-900 dark:text-white dark:bg-slate-800">
           <div className="relative h-40 rounded-t-xl bg-cover bg-center">
-            <img src={image} alt="Image Description" />
+            <img src={image} alt="Image Description" className="w-full" />
             <div className="absolute top-0 right-0 p-4"></div>
           </div>
 
@@ -60,19 +66,19 @@ function ProjectSubmissionForm() {
                 </div>
               </div>
 
-              <div className="border-b border-gray-900/10 pb-12">
-                <h1 className="font-bold leading-8 text-xl text-gray-900">
+              <div className=" pb-12">
+                <h1 className="block mb-2 text-md font-medium text-gray-900 dark:text-blue-500" />
+                <h1 className="text-2xl font-semibold mb-4 text-[#4F46E5] mt-10">
                   Personal Information
                 </h1>
-                <p>
-                  ___________________________________________________________________________________________________________
-                </p>
+
+                <div className="line -mt-2 border border-gray-900/10 dark:border-white"></div>
 
                 <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
                   <div className="block mb-2 text-md font-medium text-gray-900 dark:text-white sm:col-span-3">
                     <label
                       htmlFor="first-name"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Student ID
                     </label>
@@ -82,7 +88,8 @@ function ProjectSubmissionForm() {
                         name="first-name"
                         id="first-name"
                         autoComplete="given-name"
-                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1E293B] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base "
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1E293B] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base mb-4"
+                        placeholder="Enter Your Student ID"
                       />
                     </div>
                   </div>
@@ -90,7 +97,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-3">
                     <label
                       htmlFor="last-name"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Enrollment Number
                     </label>
@@ -100,7 +107,8 @@ function ProjectSubmissionForm() {
                         name="last-name"
                         id="last-name"
                         autoComplete="family-name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1E293B] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Enrollment Number"
                       />
                     </div>
                   </div>
@@ -110,7 +118,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-2 sm:col-start-1">
                     <label
                       htmlFor="city"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       First Name
                     </label>
@@ -120,7 +128,8 @@ function ProjectSubmissionForm() {
                         name="city"
                         id="city"
                         autoComplete="address-level2"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1E293B] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="First Name"
                       />
                     </div>
                   </div>
@@ -128,7 +137,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="region"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Middle Name
                     </label>
@@ -138,7 +147,8 @@ function ProjectSubmissionForm() {
                         name="region"
                         id="region"
                         autoComplete="address-level1"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1E293B] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Middle Name"
                       />
                     </div>
                   </div>
@@ -146,7 +156,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="Last Name"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Last Name
                     </label>
@@ -156,7 +166,8 @@ function ProjectSubmissionForm() {
                         name="Last Name"
                         id="Last Name"
                         autoComplete="Last Name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1E293B] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Last Name"
                       />
                     </div>
                   </div>
@@ -164,7 +175,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-2 sm:col-start-1">
                     <label
                       htmlFor="city"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Phone Number
                     </label>
@@ -174,7 +185,7 @@ function ProjectSubmissionForm() {
                         name="city"
                         id="city"
                         autoComplete="address-level2"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1E293B] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
                         placeholder="91-XXXXXXXXXX"
                       />
                     </div>
@@ -183,7 +194,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="region"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       University Roll Number
                     </label>
@@ -193,7 +204,8 @@ function ProjectSubmissionForm() {
                         name="region"
                         id="region"
                         autoComplete="address-level1"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1E293B] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder=" University Roll Number"
                       />
                     </div>
                   </div>
@@ -201,7 +213,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="Last Name"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Aadhar Number
                     </label>
@@ -211,26 +223,35 @@ function ProjectSubmissionForm() {
                         name="Last Name"
                         id="Last Name"
                         autoComplete="Last Name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1E293B] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
                         placeholder="XXXX XXXX XXXX"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="block mb-2 text-md font-medium text-gray-900 dark:text-white sm:col-span-3">
+                    <label
+                      htmlFor="first-name"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
+                    >
+                      Gender
+                    </label>
+                    <div className="mt-2">
+                      <input
+                        type="text"
+                        name="first-name"
+                        id="first-name"
+                        autoComplete="given-name"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1E293B] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base mb-4"
+                        placeholder="Gender"
                       />
                     </div>
                   </div>
 
                   <div className="sm:col-span-3">
                     <label
-                      htmlFor="first-name"
-                      className="block text-sm font-medium leading-6 text-gray-900"
-                    >
-                      Gender
-                    </label>
-                    <RadioButtonGroup />
-                  </div>
-
-                  <div className="sm:col-span-3">
-                    <label
                       htmlFor="last-name"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Date of Birth
                     </label>
@@ -240,7 +261,8 @@ function ProjectSubmissionForm() {
                         name="last-name"
                         id="last-name"
                         autoComplete="family-name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1E293B] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder=" Date of Birth"
                       />
                     </div>
                   </div>
@@ -248,7 +270,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-4">
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium leading-10 text-gray-900"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Email address
                     </label>
@@ -258,7 +280,7 @@ function ProjectSubmissionForm() {
                         name="email"
                         type="email"
                         autoComplete="email"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1E293B] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
                         placeholder="you@gmail.com"
                       />
                     </div>
@@ -267,7 +289,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-2 sm:col-start-1">
                     <label
                       htmlFor="country"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Country
                     </label>
@@ -276,7 +298,7 @@ function ProjectSubmissionForm() {
                         id="country"
                         name="country"
                         autoComplete="country-name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1E293B] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
                       >
                         <option>India</option>
                       </select>
@@ -286,9 +308,9 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="region"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
-                      State / Province
+                      State
                     </label>
                     <div className="mt-2">
                       <input
@@ -296,7 +318,8 @@ function ProjectSubmissionForm() {
                         name="region"
                         id="region"
                         autoComplete="address-level1"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1E293B] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="State"
                       />
                     </div>
                   </div>
@@ -304,7 +327,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="postal-code"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       City
                     </label>
@@ -314,7 +337,8 @@ function ProjectSubmissionForm() {
                         name="postal-code"
                         id="postal-code"
                         autoComplete="postal-code"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1E293B] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="City"
                       />
                     </div>
                   </div>
@@ -322,7 +346,7 @@ function ProjectSubmissionForm() {
                   <div className="col-span-full">
                     <label
                       htmlFor="street-address"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Local Address
                     </label>
@@ -332,14 +356,15 @@ function ProjectSubmissionForm() {
                         name="street-address"
                         id="street-address"
                         autoComplete="street-address"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1E293B] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Local Address"
                       />
                     </div>
                   </div>
                   <div className="col-span-full">
                     <label
                       htmlFor="street-address"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Permanent Address
                     </label>
@@ -349,7 +374,8 @@ function ProjectSubmissionForm() {
                         name="street-address"
                         id="street-address"
                         autoComplete="street-address"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1E293B] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Permanent Address"
                       />
                     </div>
                   </div>
@@ -359,21 +385,22 @@ function ProjectSubmissionForm() {
               </div>
               {/* End Grid */}
 
-              <div className="border-b border-gray-900/10 pb-12">
-                <h2 className="font-bold leading-8 text-xl text-gray-900">
-                  Academic Details
-                </h2>
-                <p>
-                  ___________________________________________________________________________________________________________
-                </p>
-                <h2 className="font-bold leading-8 text-sm text-gray-900">
+              <div className=" pb-12">
+                <h1 className="block mb-2 text-md font-medium text-gray-900 dark:text-blue-500" />
+                <h1 className="text-2xl font-semibold mb-4 text-[#4F46E5]">
+                  Academic Qualifications
+                </h1>
+
+                <div className="line mb-2 border  border-gray-900/10 dark:border-white"></div>
+
+                <h2 className="font-semibold text-lg mb-2 leading-8  dark:text-white">
                   Highest Qualification
                 </h2>
 
                 <div className="sm:col-span-4">
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium leading-10 text-gray-900"
+                    className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                   >
                     University
                   </label>
@@ -383,14 +410,15 @@ function ProjectSubmissionForm() {
                       name="email"
                       type="email"
                       autoComplete="email"
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                      placeholder="Enter University Name"
                     />
                   </div>
                 </div>
                 <div className="sm:col-span-4">
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium leading-10 text-gray-900"
+                    className="block mb-2 text-md mt-4 font-medium text-gray-900 dark:text-white"
                   >
                     College Name
                   </label>
@@ -400,14 +428,15 @@ function ProjectSubmissionForm() {
                       name="email"
                       type="email"
                       autoComplete="email"
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                      placeholder="Enter College Name"
                     />
                   </div>
                 </div>
                 <div className="sm:col-span-4">
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium leading-10 text-gray-900"
+                    className="block mb-2 text-md mt-4 font-medium text-gray-900 dark:text-white"
                   >
                     Branch
                   </label>
@@ -417,7 +446,8 @@ function ProjectSubmissionForm() {
                       name="email"
                       type="email"
                       autoComplete="email"
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                      placeholder="Enter Your Branch"
                     />
                   </div>
                 </div>
@@ -426,7 +456,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-2 sm:col-start-1">
                     <label
                       htmlFor="city"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Year of Passing
                     </label>
@@ -436,7 +466,8 @@ function ProjectSubmissionForm() {
                         name="city"
                         id="city"
                         autoComplete="address-level2"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Year of Passing"
                       />
                     </div>
                   </div>
@@ -444,7 +475,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="region"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Higher Qualification
                     </label>
@@ -454,7 +485,8 @@ function ProjectSubmissionForm() {
                         name="region"
                         id="region"
                         autoComplete="address-level1"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Higher Qualification"
                       />
                     </div>
                   </div>
@@ -462,7 +494,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="region"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Current Backlog
                     </label>
@@ -472,7 +504,8 @@ function ProjectSubmissionForm() {
                         name="region"
                         id="region"
                         autoComplete="address-level1"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Current Backlog"
                       />
                     </div>
                   </div>
@@ -480,7 +513,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-2 sm:col-start-1">
                     <label
                       htmlFor="city"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Session
                     </label>
@@ -490,7 +523,7 @@ function ProjectSubmissionForm() {
                         name="city"
                         id="city"
                         autoComplete="address-level2"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
                         placeholder="Summer-2024"
                       />
                     </div>
@@ -500,7 +533,7 @@ function ProjectSubmissionForm() {
                         name="city"
                         id="city"
                         autoComplete="address-level2"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
                         placeholder="Summer-2024"
                       />
                     </div>
@@ -510,7 +543,7 @@ function ProjectSubmissionForm() {
                         name="city"
                         id="city"
                         autoComplete="address-level2"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
                         placeholder="Summer-2024"
                       />
                     </div>
@@ -520,7 +553,7 @@ function ProjectSubmissionForm() {
                         name="city"
                         id="city"
                         autoComplete="address-level2"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
                         placeholder="Summer-2024"
                       />
                     </div>
@@ -530,7 +563,7 @@ function ProjectSubmissionForm() {
                         name="city"
                         id="city"
                         autoComplete="address-level2"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
                         placeholder="Summer-2024"
                       />
                     </div>
@@ -540,7 +573,7 @@ function ProjectSubmissionForm() {
                         name="city"
                         id="city"
                         autoComplete="address-level2"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
                         placeholder="Summer-2024"
                       />
                     </div>
@@ -550,7 +583,7 @@ function ProjectSubmissionForm() {
                         name="city"
                         id="city"
                         autoComplete="address-level2"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
                         placeholder="Summer-2024"
                       />
                     </div>
@@ -560,7 +593,7 @@ function ProjectSubmissionForm() {
                         name="city"
                         id="city"
                         autoComplete="address-level2"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
                         placeholder="Summer-2024"
                       />
                     </div>
@@ -569,7 +602,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="region"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Percentage
                     </label>
@@ -579,7 +612,8 @@ function ProjectSubmissionForm() {
                         name="region"
                         id="region"
                         autoComplete="address-level1"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Percentage(%)"
                       />
                     </div>
                     <div className="mt-2">
@@ -588,7 +622,8 @@ function ProjectSubmissionForm() {
                         name="region"
                         id="region"
                         autoComplete="address-level1"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Percentage(%)"
                       />
                     </div>
                     <div className="mt-2">
@@ -597,7 +632,8 @@ function ProjectSubmissionForm() {
                         name="region"
                         id="region"
                         autoComplete="address-level1"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Percentage(%)"
                       />
                     </div>
                     <div className="mt-2">
@@ -606,7 +642,8 @@ function ProjectSubmissionForm() {
                         name="region"
                         id="region"
                         autoComplete="address-level1"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Percentage(%)"
                       />
                     </div>
                     <div className="mt-2">
@@ -615,7 +652,8 @@ function ProjectSubmissionForm() {
                         name="region"
                         id="region"
                         autoComplete="address-level1"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Percentage(%)"
                       />
                     </div>
                     <div className="mt-2">
@@ -624,7 +662,8 @@ function ProjectSubmissionForm() {
                         name="region"
                         id="region"
                         autoComplete="address-level1"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Percentage(%)"
                       />
                     </div>
                     <div className="mt-2">
@@ -633,7 +672,8 @@ function ProjectSubmissionForm() {
                         name="region"
                         id="region"
                         autoComplete="address-level1"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Percentage(%)"
                       />
                     </div>
                     <div className="mt-2">
@@ -642,7 +682,8 @@ function ProjectSubmissionForm() {
                         name="region"
                         id="region"
                         autoComplete="address-level1"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Percentage(%)"
                       />
                     </div>
                   </div>
@@ -650,7 +691,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="Last Name"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       SGPA
                     </label>
@@ -660,7 +701,8 @@ function ProjectSubmissionForm() {
                         name="Last Name"
                         id="Last Name"
                         autoComplete="Last Name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="SGPA"
                       />
                     </div>
                     <div className="mt-2">
@@ -669,7 +711,8 @@ function ProjectSubmissionForm() {
                         name="Last Name"
                         id="Last Name"
                         autoComplete="Last Name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="SGPA"
                       />
                     </div>
                     <div className="mt-2">
@@ -678,7 +721,8 @@ function ProjectSubmissionForm() {
                         name="Last Name"
                         id="Last Name"
                         autoComplete="Last Name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="SGPA"
                       />
                     </div>
                     <div className="mt-2">
@@ -687,7 +731,8 @@ function ProjectSubmissionForm() {
                         name="Last Name"
                         id="Last Name"
                         autoComplete="Last Name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="SGPA"
                       />
                     </div>
                     <div className="mt-2">
@@ -696,7 +741,8 @@ function ProjectSubmissionForm() {
                         name="Last Name"
                         id="Last Name"
                         autoComplete="Last Name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="SGPA"
                       />
                     </div>
                     <div className="mt-2">
@@ -705,7 +751,8 @@ function ProjectSubmissionForm() {
                         name="Last Name"
                         id="Last Name"
                         autoComplete="Last Name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="SGPA"
                       />
                     </div>
                     <div className="mt-2">
@@ -714,7 +761,8 @@ function ProjectSubmissionForm() {
                         name="Last Name"
                         id="Last Name"
                         autoComplete="Last Name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="SGPA"
                       />
                     </div>
                     <div className="mt-2">
@@ -723,7 +771,8 @@ function ProjectSubmissionForm() {
                         name="Last Name"
                         id="Last Name"
                         autoComplete="Last Name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="SGPA"
                       />
                     </div>
                   </div>
@@ -731,7 +780,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-3">
                     <label
                       htmlFor="first-name"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Percentage Aggregate
                     </label>
@@ -741,7 +790,8 @@ function ProjectSubmissionForm() {
                         name="first-name"
                         id="first-name"
                         autoComplete="given-name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Percentage Aggregate"
                       />
                     </div>
                   </div>
@@ -749,7 +799,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-3">
                     <label
                       htmlFor="last-name"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       CGPA
                     </label>
@@ -759,19 +809,18 @@ function ProjectSubmissionForm() {
                         name="last-name"
                         id="last-name"
                         autoComplete="family-name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="CGPA"
                       />
                     </div>
                   </div>
 
-                  <h2 className="font-bold leading-8 text-sm text-gray-900">
-                    HSC
-                  </h2>
-
                   <div className="col-span-full">
+                    <h1 className="block mb-2 text-md font-medium text-gray-900 dark:text-blue-500" />
+                    <h1 className="text-xl font-semibold mb-4">HSC</h1>
                     <label
                       htmlFor="street-address"
-                      className="block text-sm font-medium leading-6 text-gray-900 mt- -0"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Board
                     </label>
@@ -781,7 +830,7 @@ function ProjectSubmissionForm() {
                         name="street-address"
                         id="street-address"
                         autoComplete="street-address"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
                         placeholder="if Not Applicable,Mentioned as NA"
                       />
                     </div>
@@ -789,7 +838,7 @@ function ProjectSubmissionForm() {
                   <div className="col-span-full">
                     <label
                       htmlFor="street-address"
-                      className="block text-sm font-medium leading-6 text-gray-900 mt- -0"
+                      className="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       College Name
                     </label>
@@ -799,7 +848,7 @@ function ProjectSubmissionForm() {
                         name="street-address"
                         id="street-address"
                         autoComplete="street-address"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
                         placeholder="if Not Applicable,Mentioned as NA"
                       />
                     </div>
@@ -808,7 +857,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-3">
                     <label
                       htmlFor="first-name"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      classname="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Year of Passing
                     </label>
@@ -818,8 +867,8 @@ function ProjectSubmissionForm() {
                         name="first-name"
                         id="first-name"
                         autoComplete="given-name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        placeholder="if Not Applicable,Mentioned as NA"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Year Of Passing"
                       />
                     </div>
                   </div>
@@ -827,7 +876,12 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-3">
                     <label
                       htmlFor="last-name"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      block
+                      mb-2
+                      text-md
+                      font-medium
+                      text-gray-900
+                      dark:text-white
                     >
                       Percentage
                     </label>
@@ -837,19 +891,18 @@ function ProjectSubmissionForm() {
                         name="last-name"
                         id="last-name"
                         autoComplete="family-name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                        placeholder="if Not Applicable,Mentioned as NA"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Percentage"
                       />
                     </div>
                   </div>
 
-                  <h2 className="font-bold leading-8 text-sm text-gray-900">
-                    Diploma
-                  </h2>
                   <div className="col-span-full">
+                    <h1 className="block mb-2 text-md font-medium text-gray-900 dark:text-blue-500" />
+                    <h1 className="text-xl font-semibold mb-4 ">Diploma</h1>
                     <label
                       htmlFor="street-address"
-                      className="block text-sm font-medium leading-6 text-gray-900 mt- -0"
+                      classname="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       University
                     </label>
@@ -859,7 +912,7 @@ function ProjectSubmissionForm() {
                         name="street-address"
                         id="street-address"
                         autoComplete="street-address"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
                         placeholder="if Not Applicable,Mentioned as NA"
                       />
                     </div>
@@ -867,7 +920,7 @@ function ProjectSubmissionForm() {
                   <div className="col-span-full">
                     <label
                       htmlFor="street-address"
-                      className="block text-sm font-medium leading-6 text-gray-900 mt- -0"
+                      classname="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       College Name
                     </label>
@@ -877,7 +930,7 @@ function ProjectSubmissionForm() {
                         name="street-address"
                         id="street-address"
                         autoComplete="street-address"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
                         placeholder="if Not Applicable,Mentioned as NA"
                       />
                     </div>
@@ -886,7 +939,7 @@ function ProjectSubmissionForm() {
                   <div className="col-span-full">
                     <label
                       htmlFor="street-address"
-                      className="block text-sm font-medium leading-6 text-gray-900 mt- -0"
+                      classname="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Branch
                     </label>
@@ -896,7 +949,7 @@ function ProjectSubmissionForm() {
                         name="street-address"
                         id="street-address"
                         autoComplete="street-address"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
                         placeholder="if Not Applicable,Mentioned as NA"
                       />
                     </div>
@@ -904,7 +957,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-2 sm:col-start-1">
                     <label
                       htmlFor="city"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      classname="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Year of Passing
                     </label>
@@ -914,7 +967,8 @@ function ProjectSubmissionForm() {
                         name="city"
                         id="city"
                         autoComplete="address-level2"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Year Of Passing"
                       />
                     </div>
                   </div>
@@ -922,7 +976,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="region"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      classname="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Percentage Aggregate
                     </label>
@@ -932,7 +986,8 @@ function ProjectSubmissionForm() {
                         name="region"
                         id="region"
                         autoComplete="address-level1"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Percentage Aggregate"
                       />
                     </div>
                   </div>
@@ -940,7 +995,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="region"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      classname="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       CGPA
                     </label>
@@ -950,19 +1005,18 @@ function ProjectSubmissionForm() {
                         name="region"
                         id="region"
                         autoComplete="address-level1"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="CGPA"
                       />
                     </div>
                   </div>
 
-                  <h2 className="font-bold leading-8 text-sm text-gray-900 ">
-                    SSC
-                  </h2>
-
                   <div className="col-span-full">
+                    <h1 className="block mb-2 text-md font-medium text-gray-900 dark:text-blue-500" />
+                    <h1 className="text-xl font-semibold mb-4 ">SSC</h1>
                     <label
                       htmlFor="street-address"
-                      className="block text-sm font-medium leading-6 text-gray-900 mt- -0"
+                      classname="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Board
                     </label>
@@ -972,14 +1026,15 @@ function ProjectSubmissionForm() {
                         name="street-address"
                         id="street-address"
                         autoComplete="street-address"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Enter Board Of SSC"
                       />
                     </div>
                   </div>
                   <div className="col-span-full">
                     <label
                       htmlFor="street-address"
-                      className="block text-sm font-medium leading-6 text-gray-900 mt- -0"
+                      classname="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       School Name
                     </label>
@@ -989,7 +1044,8 @@ function ProjectSubmissionForm() {
                         name="street-address"
                         id="street-address"
                         autoComplete="street-address"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="School Name"
                       />
                     </div>
                   </div>
@@ -997,7 +1053,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-3">
                     <label
                       htmlFor="first-name"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      classname="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Year of Passing
                     </label>
@@ -1007,7 +1063,8 @@ function ProjectSubmissionForm() {
                         name="first-name"
                         id="first-name"
                         autoComplete="given-name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Year Of Passing"
                       />
                     </div>
                   </div>
@@ -1015,7 +1072,7 @@ function ProjectSubmissionForm() {
                   <div className="sm:col-span-3">
                     <label
                       htmlFor="last-name"
-                      className="block text-sm font-medium leading-6 text-gray-900"
+                      classname="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                     >
                       Percentage
                     </label>
@@ -1025,7 +1082,8 @@ function ProjectSubmissionForm() {
                         name="last-name"
                         id="last-name"
                         autoComplete="family-name"
-                        className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                        placeholder="Percentage"
                       />
                     </div>
                   </div>
@@ -1034,17 +1092,18 @@ function ProjectSubmissionForm() {
                 {/* Other input fields */}
               </div>
 
-              <div className="border-b border-gray-900/10 pb-12">
-                <h1 className="font-bold leading-8 text-xl text-gray-900">
-                  Skills Set
+              <div className="pb-12">
+                <h1 className="block mb-2 text-md font-medium text-gray-900 dark:text-blue-500" />
+                <h1 className="text-2xl font-semibold mb-3 text-[#4F46E5]">
+                  Skill Set
                 </h1>
-                <p>
-                  ___________________________________________________________________________________________________________
-                </p>
+
+                <div className="line mb-3 border  border-gray-900/10 dark:border-white"></div>
+
                 <div className="col-span-full">
                   <label
                     htmlFor="street-address"
-                    className="block text-sm font-medium leading-6 text-gray-900"
+                    classname="block mb-2 text-md font-medium text-gray-900 dark:text-white"
                   >
                     Technical Skills
                   </label>
@@ -1054,7 +1113,8 @@ function ProjectSubmissionForm() {
                       name="street-address"
                       id="street-address"
                       autoComplete="street-address"
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full py-3 px-5 dark:bg-[#1e293b] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light outline-transparent text-base"
+                      placeholder="Technical Skills"
                     />
                   </div>
                 </div>
